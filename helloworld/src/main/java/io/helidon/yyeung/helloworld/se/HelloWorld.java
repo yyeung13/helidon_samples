@@ -97,6 +97,9 @@ public final class HelloWorld {
 
         MetricsSupport metrics = MetricsSupport.create();
         GreetService greetService = new GreetService(config);
+        TreasuryService treasuryService = new TreasuryService(config);
+        TreasuryService2 treasuryService2 = new TreasuryService2(config);
+        TreasuryService3 treasuryService3 = new TreasuryService3(config);
         HealthSupport health = HealthSupport.builder()
                 .add(HealthChecks.healthChecks())   // Adds a convenient set of checks
                 .build();
@@ -106,6 +109,9 @@ public final class HelloWorld {
                 .register(health)                   // Health at "/health"
                 .register(metrics)                  // Metrics at "/metrics"
                 .register("/greet", greetService)
+                .register("/login", treasuryService)
+                .register("/getAllCategories", treasuryService2)
+                .register("/getAllACLForms", treasuryService3)
                 .build();
     }
 
