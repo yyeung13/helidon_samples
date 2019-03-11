@@ -1,7 +1,7 @@
 
 # Helidon Example: quickstart-se
 
-This example implements a simple API First REST demo service.
+This example implements a simple Hello World REST service.
 
 ## Prerequisites
 

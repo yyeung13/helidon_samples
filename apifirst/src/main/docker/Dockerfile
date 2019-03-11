@@ -18,6 +18,6 @@ FROM openjdk:8-jre-slim
 
 RUN mkdir /app
 COPY libs /app/libs
-COPY apifirst-se.jar /app
+COPY ${project.artifactId}.jar /app
 
-CMD ["java", "-jar", "/app/apifirst-se.jar"]
+CMD ["java", "-jar", "/app/${project.artifactId}.jar"]
