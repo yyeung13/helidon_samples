@@ -49,13 +49,22 @@ public class PromotionService implements Service {
     PromotionService(Config config) {
 		init();
     }
-
+/*
 	private void init() {
-		Promotion promo = new Promotion("OOW Early Bird Promo", "OOWEARLYBIRD", "1 Jan 2019", "28 Feb 2019", "Sign up for OOW early and enoy 50% discount NOW!", "50%");
+		Config config = Config.create(
+        		ConfigSources.prefixed("promotions",
+                               classpath("promotions.properties")));
+	
+	}
+*/
+	private void init() {
+		//Promotion promo = new Promotion("OOW Early Bird Promo", "OOWEARLYBIRD", "1 Jan 2019", "28 Feb 2019", "Sign up for OOW early and enjoy 50% discount NOW!", "50%");
+		Promotion promo = new Promotion("National Day 2019 Promotion", "NDP2019", "1 Jan 2019", "30 Sep 2019", "Subscribers enjoy 5% - 20% discounts when showing promotion code to selected retailer!", "10%");
 		promotions.put("FutureTech", promo);
 		promotions.put("NextGenBiz", promo);
-		promo = new Promotion("OOW Plattinum Partner Promo", "OOWPLATINUM", "1 Jan 2019", "31 Mar 2019", "Platinum Partners get 20% Discount!", "20%");
+		//promo = new Promotion("OOW Platinum Partner Promo", "OOWPLATINUM", "1 Jan 2019", "31 Mar 2019", "Platinum Partners get 20% Discount!", "20%");
 		promotions.put("DigiBot", promo);
+		promotions.put("BestCoffee", promo);
 	}
 
     /**
