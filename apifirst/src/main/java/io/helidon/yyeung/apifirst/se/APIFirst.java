@@ -74,7 +74,7 @@ public final class APIFirst {
                 System.out.println(
                         "Welcome to Oracle API First Micro Service (Oracle Digital Platform ASEAN");
                 System.out.println(
-                        "API First server is up! http://localhost:" + ws.port() + "/promotion");
+                        "API First server is up! http://localhost:" + ws.port() + "/getPromotionByPartnershipID");
                 ws.whenShutdown().thenRun(()
                     -> System.out.println("API First server is DOWN. Good bye!"));
                 })
@@ -100,6 +100,7 @@ public final class APIFirst {
         MetricsSupport metrics = MetricsSupport.create();
         GreetService greetService = new GreetService(config);
         PromotionService promoService = new PromotionService(config);
+        RegisterService registerService = new RegisterService(config);
         //TreasuryService treasuryService = new TreasuryService(config);
         //TreasuryService2 treasuryService2 = new TreasuryService2(config);
         //TreasuryService3 treasuryService3 = new TreasuryService3(config);
@@ -112,7 +113,8 @@ public final class APIFirst {
                 .register(health)                   // Health at "/health"
                 .register(metrics)                  // Metrics at "/metrics"
                 .register("/greet", greetService)
-                .register("/promotion", promoService)
+                .register("/getPromotionByPartnershipID", promoService)
+                .register("/registerPromotion", registerService)
                 //.register("/login", treasuryService)
                 //.register("/getAllCategories", treasuryService2)
                 //.register("/getAllACLForms", treasuryService3)

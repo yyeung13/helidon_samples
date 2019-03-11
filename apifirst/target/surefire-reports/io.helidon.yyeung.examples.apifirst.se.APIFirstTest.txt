@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: io.helidon.yyeung.examples.apifirst.se.APIFirstTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.528 sec - in io.helidon.yyeung.examples.apifirst.se.APIFirstTest
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.502 sec - in io.helidon.yyeung.examples.apifirst.se.APIFirstTest
