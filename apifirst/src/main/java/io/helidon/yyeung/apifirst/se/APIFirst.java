@@ -72,7 +72,7 @@ public final class APIFirst {
         server.start()
             .thenAccept(ws -> {
                 System.out.println(
-                        "Welcome to Oracle API First Micro Service (Oracle Digital Platform ASEAN");
+                        "Welcome to Oracle API First Micro Service (Oracle Digital Platform ASEAN)");
                 System.out.println(
                         "API First server is up! http://localhost:" + ws.port() + "/getPromotionByPartnershipID");
                 ws.whenShutdown().thenRun(()

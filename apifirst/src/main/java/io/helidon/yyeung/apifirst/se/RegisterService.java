@@ -34,7 +34,7 @@ import io.helidon.webserver.Service;
  * A simple service to greet you. Examples:
  *
  * Get promo details for Avitek:
- * curl -X GET http://localhost:8080/registerPromotion/NDP2019/Best Coffee/BestCoffee/Business Expansion/10%/rogerlim2019@gmail.com
+ * curl -X GET http://localhost:8080/registerPromotion/NDP2019/Best%20Coffee/BestCoffee/Business%20Expansion/10%25/rogerlim2019@gmail.com
  *
  * The message is returned as a JSON object
  */
@@ -89,6 +89,7 @@ public class RegisterService implements Service {
 
         JsonObject returnObject = JSON.createObjectBuilder()
                 .add("message", msg)
+                .add("status", "Success")
                 .build();
         response.send(returnObject);
     }
